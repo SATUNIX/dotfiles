@@ -11,7 +11,7 @@ This repository is a **personal fork of [flicko’s Aurora](https://github.com/f
 
 ---
 
-## 🔧 Installation (Automated)
+## Installation (Automated)
 
 You can bootstrap the entire environment with a **single script**. This script installs all dependencies (pacman + paru), clones this repo, backs up your configs, and applies the fork’s configuration.
 
@@ -34,7 +34,7 @@ curl -fsSL https://raw.githubusercontent.com/SATUNIX/dotfiles/refs/heads/aurora/
 
 ---
 
-## 📦 Package Differences from Upstream Aurora
+## Package Differences from Upstream Aurora
 
 * **Removed**:
 
@@ -54,7 +54,7 @@ curl -fsSL https://raw.githubusercontent.com/SATUNIX/dotfiles/refs/heads/aurora/
 
 ---
 
-## 🗂️ Repository Layout
+## Repository Layout
 
 ```
 dotfiles/
@@ -69,7 +69,7 @@ dotfiles/
 
 ---
 
-## 🚀 Notes
+## Notes
 
 * This fork is tailored for **Hyprland + Hyprpaper + Gtklock + Hyprshot** workflow.
 * Original Aurora README is preserved below for reference.
