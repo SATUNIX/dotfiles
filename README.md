@@ -1,3 +1,14 @@
+# Satunix Aurora 
+
+A modification of the aurora config for hyprland. 
+Please see the branch "aurora" for my modifications. 
+
+
+Refer to the below for previous readme. 
+
+---
+
+
 <div align=center>
     <img src="./assets/title.svg">
 </div>
