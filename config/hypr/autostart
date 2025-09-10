@@ -8,11 +8,12 @@ scripts=$config/scripts
 dunst &
 
 # waybar
-$scripts/launch_waybar &
-$scripts/tools/dynamic &
-
+#$scripts/launch_waybar &
+#$scripts/tools/dynamic &
+#waybar
 # wallpaper
-$scripts/wall $config/wallpapers/4.jpg &
+#$scripts/wall $config/wallpapers/4.jpg &
+#hyprpaper
 
 # effects
 $scripts/rgb &

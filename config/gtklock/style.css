@@ -1,0 +1,81 @@
+/* Use JetBrains Mono everywhere (install the font system-wide first) */
+* {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Fullscreen background stays as-is from your compositor or config.
+   We add a subtle dark overlay to enhance contrast. */
+window {
+  background-color: rgba(0, 0, 0, 0.25); /* subtle dark veil over your image */
+}
+
+/* Center stack “glass pane” */
+box, grid {
+  /* Many default layouts use a root vbox; this safely makes panes glassy */
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  background-color: rgba(255,255,255,0.06); /* fallback if gradient not applied */
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 0;            /* strict Greyscale vibe: no rounded corners */
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255,255,255,0.08);
+  padding: 24px;
+}
+
+/* Labels (time/date/user) */
+label {
+  color: #e8e8e8;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  letter-spacing: 0.3px;
+}
+
+/* Make prominent labels pop a bit more */
+label.large, label.title, label#time, label#date {
+  font-weight: 700;
+  font-size: 42px;
+}
+
+/* Entry field (password) */
+entry {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03));
+  background-color: rgba(255,255,255,0.07);
+  color: #f2f2f2;
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 0;
+  padding: 12px 14px;
+  caret-color: #f2f2f2;
+}
+
+/* Entry placeholder & selection */
+entry placeholder {
+  color: rgba(242,242,242,0.55);
+}
+entry selection {
+  background-color: rgba(255,255,255,0.22);
+  color: #111;
+}
+
+/* Buttons (powerbar, etc.) */
+button {
+  background-image: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03));
+  background-color: rgba(255,255,255,0.06);
+  color: #f2f2f2;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 0;
+  padding: 10px 14px;
+}
+button:hover {
+  background-color: rgba(255,255,255,0.10);
+}
+button:active {
+  background-color: rgba(255,255,255,0.14);
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.45);
+}
+
+/* Subtle separators */
+separator, .separator {
+  background-color: rgba(255,255,255,0.12);
+}
+
+/* If your layout exposes container IDs, you can target them too:
+#user, #clock, #powerbar { ... }
+*/
+
