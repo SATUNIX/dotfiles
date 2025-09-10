@@ -1,3 +1,86 @@
+# SATUNIX Aurora Fork (Hyprland Setup)
+
+This repository is a **personal fork of [flicko’s Aurora](https://github.com/flicko/aurora)** with a streamlined installation and a few key modifications:
+
+* **Display Manager / Session**: Hyprland-based environment, no swaylock-effects.
+* **Wallpaper**: Using **Hyprpaper** (instead of `swww`).
+* **Lockscreen**: Using **Gtklock** + `gtklock-powerbar-module` (instead of `swaylock-effects`).
+* **Screenshots**: Using **Hyprshot** (from official repos, no longer from AUR).
+* **Fonts**: Includes **JetBrains Mono** and extended JetBrains font families in configs.
+* **Configs**: All configs live under `./config` in this repo and are deployed directly to `~/.config`.
+
+---
+
+## 🔧 Installation (Automated)
+
+You can bootstrap the entire environment with a **single script**. This script installs all dependencies (pacman + paru), clones this repo, backs up your configs, and applies the fork’s configuration.
+
+> ⚠️ **Arch Linux required.** Do not run as root; use a normal user with `sudo` privileges.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/SATUNIX/dotfiles/refs/heads/aurora/install.sh | bash
+```
+
+### What it does
+
+1. Ensures `paru` is installed (AUR helper).
+2. Installs all required packages from **pacman** and **paru**.
+3. Clones this repository (`aurora` branch).
+4. Backs up your current `~/.config` → `~/.<timestamp>.config.bak`.
+5. Deploys this repo’s `./config` → `~/.config`.
+6. Creates Hyprland state files (`~/.config/hypr/store/...`).
+7. Marks scripts in `~/.config/hypr/scripts/` executable.
+8. Shows a summary of packages installed/removed in the last 24 hours.
+
+---
+
+## 📦 Package Differences from Upstream Aurora
+
+* **Removed**:
+
+  * `swww-git` (wallpaper daemon)
+  * `swaylock-effects-git` (lockscreen)
+
+* **Added / Replaced**:
+
+  * `hyprpaper` (wallpaper)
+  * `gtklock`, `gtklock-powerbar-module` (lockscreen)
+  * `hyprshot` (screenshots, now in official repos)
+  * `ttf-jetbrains-mono` (font)
+
+* **Unchanged core**:
+
+  * `hyprland`, `foot`, `grim`, `slurp`, `waybar`, `fish`, `light`, `sddm`, `xdg-desktop-portal-hyprland`, etc.
+
+---
+
+## 🗂️ Repository Layout
+
+```
+dotfiles/
+├── config/             # configs to be deployed directly into ~/.config
+│   ├── hypr/           # Hyprland configs, scripts, store files
+│   ├── waybar/         # Waybar configuration
+│   ├── gtklock/        # Gtklock config + style
+│   └── ...
+├── install.sh          # automated installation script
+└── (Aurora’s original README.md follows)
+```
+
+---
+
+## 🚀 Notes
+
+* This fork is tailored for **Hyprland + Hyprpaper + Gtklock + Hyprshot** workflow.
+* Original Aurora README is preserved below for reference.
+* If you want to update configs after installation, just re-clone and re-run the installer; your old `~/.config` will always be timestamped and preserved.
+
+
+Refer to the below for the previous readme file. For reference. 
+
+---
+
+
 <div align="justify">
 
 <div align="center">
